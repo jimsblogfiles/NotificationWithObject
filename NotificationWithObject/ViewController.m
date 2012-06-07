@@ -31,14 +31,12 @@
 	[button addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
 	[self.view addSubview:button];
 
-
 	UIButton *button1 = [UIButton buttonWithType:UIButtonTypeRoundedRect];
 	[button1 setFrame:CGRectMake(10, 67, 120, 37)];
 	[button1 setTitle:@"Cheddar" forState:UIControlStateNormal];
 	[button1 setTag:1];
 	[button1 addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
 	[self.view addSubview:button1];
-	
 	
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notificationResponse:) name:@"ChosenCheeseNotification" object:nil];
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(anotherNotificationResponse:) name:@"ViewDidLoadNotification" object:nil];
@@ -65,8 +63,6 @@
 	NSLog(@"notif.object:%@",notif.object);
 	
 }
-
-
 
 - (void)viewDidUnload {
 
